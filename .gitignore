@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables - NEVER commit API keys!
+.env
+
+# Logs - contains user data
+logs/
+*.log
+
+# Vector Database
+chroma_db/
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+app_old_backup.py
+
+# Gradio cache
+gradio_cached_examples/
+flagged/
+
+# Documentation (keep README.md)
+MODERN_UI_GUIDE.md
+
+# Old/backup files
+app_modern.py
+gradio_app.py

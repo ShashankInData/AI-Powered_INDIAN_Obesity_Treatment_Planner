@@ -1,0 +1,143 @@
+# Task 1: Patient Data Analysis
+analyze_patient_data:
+  description: |
+    Analyze patient data and provide PERSONALIZED diagnostic assessment:
+
+    {patient_data}
+
+    CRITICAL: Analyze lifestyle factors (physical_activity, steps, smoking, alcohol)!
+
+    Include:
+    1. Health status (BMI, age, vitals)
+    2. Risk factors (location, socioeconomic, lifestyle)
+    3. Lifestyle analysis:
+       - Walkers: Acknowledge positive habit
+       - Sedentary (<2000 steps): Flag for improvement
+       - Smokers: Note metabolism impact
+       - Alcohol: Calculate empty calories
+    4. Health concerns needing attention
+    5. Patient strengths (motivational)
+    6. Recommendations for treatment team
+
+    Be concise, evidence-based, encouraging.
+  expected_output: |
+    Diagnostic report with demographics, BMI assessment, risk analysis, health concerns, team recommendations.
+  agent: data_analyst
+
+# Task 2: Meal Plan Creation
+create_diet_plan:
+  description: |
+    Create personalized 7-day Indian meal plan with motivation:
+
+    {patient_data}
+    {diagnostic_report}
+
+    PERSONALIZE based on:
+    - Alcohol? Reduce liquid calories
+    - Smoker? Add metabolism boosters, antioxidants
+    - Walker? Pre/post-walk nutrition tips
+    - Sedentary? Motivate to start small
+
+    Include:
+    1. Motivational intro (2-3 sentences)
+    2. Daily calorie target + macros
+    3. 7-day plan: breakfast, snacks (2), lunch, dinner
+    4. Portion sizes, calorie counts
+    5. Regional foods (patient's state)
+    6. Budget considerations
+    7. Cooking tips, substitutions
+
+    Keep culturally appropriate, affordable, realistic.
+  expected_output: |
+    7-day meal plan with calories/macros, specific Indian dishes with portions, shopping list, weekly cost, meal prep tips.
+  agent: dietician
+
+# Task 3: Medical Evaluation
+evaluate_medical_needs:
+  description: |
+    Assess if medical intervention needed:
+
+    {patient_data}
+    {diagnostic_report}
+
+    Provide:
+    1. Lifestyle-only vs medication assessment
+    2. Recommended labs (HbA1c, lipids, thyroid, liver)
+    3. If BMI >30 or >27 with comorbidities:
+       - GLP-1 agonists/Metformin/Orlistat (dosage, duration)
+       - Expected outcomes
+       - Side effects, contraindications
+       - Indian market costs
+    4. Follow-up schedule
+
+    Base on evidence, Indian healthcare context.
+  expected_output: |
+    Medical report with intervention assessment, lab tests, medications (if needed: name, dose, duration, outcomes, costs), monitoring schedule, red flags.
+  agent: medical_advisor
+
+# Task 4: Exercise Program Design
+create_fitness_plan:
+  description: |
+    Design progressive exercise program with personalized motivation:
+
+    {patient_data}
+    {diagnostic_report}
+
+    BASE ON ACTIVITY LEVEL:
+    - Walking? "Great! Let's optimize."
+    - Sedentary? "Small steps, big changes."
+    - Active (10K+ steps)? "Impressive! Add strength training."
+
+    Include:
+    1. Motivational opening (acknowledge current level)
+    2. Fitness assessment (BMI, age, reported activity)
+    3. Weekly schedule (frequency, duration, intensity)
+    4. Exercises: cardio, strength, flexibility
+    5. Location options (urban/rural)
+    6. Progressive plan with milestones (Wk 1-2, 3-4, Mo 2-3)
+    7. Calorie burn estimates
+    8. Safety for high BMI
+
+    Emphasize yoga, walking, Indian practices.
+  expected_output: |
+    4-week program with fitness assessment, daily/weekly routines (exercises, reps, intensity, calories), location-specific options, equipment, safety, motivation, expected weight loss contribution.
+  agent: fitness_trainer
+
+# Task 5: Integrated Treatment Plan Coordination
+coordinate_treatment_plan:
+  description: |
+    Synthesize specialist recommendations into MOTIVATIONAL 30-day plan:
+
+    {patient_data}
+    {diagnostic_report}
+    {diet_plan}
+    {medical_evaluation}
+    {fitness_plan}
+
+    START WITH ENCOURAGEMENT based on lifestyle:
+    - Walker? "Excellent momentum!"
+    - Smoker/drinker? "Reducing accelerates progress!"
+    - Sedentary? "First step matters!"
+
+    Create:
+    1. Encouraging opening (2-3 sentences)
+    2. Integrated strategy
+    3. Prioritized actions (immediate, Wk 1, Wk 2-4)
+    4. Realistic goals + milestones
+    5. Weekly action plan with motivation
+    6. Total costs (food, meds, labs, equipment)
+    7. Barriers + solutions
+    8. Monitoring system
+    9. Patient summary + next steps
+
+    NO placeholder contacts. Keep practical, affordable, culturally appropriate, inspiring.
+  expected_output: |
+    30-day plan with:
+    - Executive summary (overview, goals)
+    - Weekly actions (Wk 1-4)
+    - Integrated recommendations (diet, exercise, medical, lifestyle)
+    - Cost breakdown (30-day total, tips)
+    - Success metrics (weight, BMI, behaviors)
+    - Monitoring (check-ins, tracking, help triggers)
+    - Patient checklist (top 5 actions)
+  agent: care_coordinator

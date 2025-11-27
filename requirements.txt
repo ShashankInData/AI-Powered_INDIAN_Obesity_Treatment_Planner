@@ -1,0 +1,22 @@
+# Core AI Framework - using compatible versions
+crewai==0.1.32
+langchain>=0.1.0
+langchain-openai>=0.0.2
+openai>=1.0.0,<2.0.0
+
+# RAG System
+sentence-transformers>=2.2.0
+langchain-community>=0.0.20
+langchain-chroma>=0.1.0
+chromadb>=0.4.0
+
+# Web Interface
+gradio==4.44.1
+
+# Data Processing
+pandas>=2.0.0,<2.3.0
+numpy>=1.24.0,<2.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0
