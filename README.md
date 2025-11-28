@@ -322,7 +322,7 @@ OpenAI API Key
 
 1. **Clone the repository**
 ```bash
-git clone https://huggingface.co/spaces/[YOUR-USERNAME]/obesity-treatment-planner
+git clone https://github.com/ShashankInData/AI-Powered_INDIAN_Obesity_Treatment_Planner.git
 cd obesity-treatment-planner
 ```
 
